@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+<h1>User Registration</h1>
+
+<form action="${pageContext.request.contextPath}/registration" method="post">
+    First Name: <input type="text" name="first_name"><br>
+    Second Name: <input type="text" name="second_name"><br>
+    Email: <input type="text" name="email"><br>
+    Age: <input type="text" name="age"><br>
+    <input type="submit" value="Register">
+</form>
+
+<h2>Registered Users</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Second Name</th>
+        <th>Email</th>
+        <th>Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="user" items="${userList}">
+        <tr>
+            <td>" "</td>
+            <td>" "</td>
+            <td>" "</td>
+            <td>" "</td>
+            <td>" "</td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
+</body>
+</html>
